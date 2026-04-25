@@ -1,0 +1,185 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #111;
+}
+
+/* App Container */
+.App {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Header */
+header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f46e5, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  margin-top: 6px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Form */
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Input Box */
+#inp {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+#inp:focus-within {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+#inp input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Add Button */
+#inp button {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#inp button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
+
+/* Filters */
+#btns {
+  display: flex;
+  gap: 8px;
+}
+
+#btns select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* Completed Task */
+.task-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background: #f9fafb;
+}
+
+/* Task Buttons */
+.task-list button {
+  border: none;
+  background: #ecfdf5;
+  color: #059669;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task-list button:hover {
+  background: #10b981;
+  color: white;
+}
+
+/* Progress Section */
+.progress-tracker {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  transition: width 0.3s ease;
+}
+
+/* Clear Button */
+.clear-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clear-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(220, 38, 38, 0.3);
+}
