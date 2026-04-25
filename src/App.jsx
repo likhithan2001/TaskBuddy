@@ -34,7 +34,7 @@ export default function App() {
   return(
     <div className="App">
       <header>
-      <h1 className="title">Task Focus</h1>
+      <h1 className="title">Task Buddy</h1>
       <p className="tagline">Our friendly TaskManager</p>
       </header>
       <Taskform addTask = {addTask}/>
